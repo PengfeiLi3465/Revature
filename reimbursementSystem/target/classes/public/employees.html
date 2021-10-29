@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee page</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<meta name="theme-color" content="#7952b3">
+<script type="text/javascript" src="employees.js"></script>
+</head>
+
+<body class="text-center">
+
+	<main class="form-employee">
+		<div class="py-5 text-center">
+			<h2>Please fill the reimbursement form</h2>
+		</div>
+
+		<div class="container mt-3">
+			<form method="" action="">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Request</span>
+					</div>
+					<div class="col-9">
+						<input type="text" class="form-control" placeholder="Discription"
+							id="Description">
+					</div>
+					<div class="col">
+						<input type="value" class="form-control" placeholder="Amount"
+							id="Amount"
+							onKeyPress="if((event.keyCode<48 || event.keyCode>57) && event.keyCode!=46 || /\.\d\d$/.test(value))event.returnValue=false">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div>
+			<button class="btn btn-primary" type="submit"
+				onclick="insertNewRequest();">submit new request</button>
+			<button class="btn btn-primary" type="submit"
+				onclick="showAllRequest();">show all record</button>
+		</div>
+		<div class="container mt-3">
+			<table id="table" class="table table-hover">
+				<thead>
+					<tr>
+						<th class="text-center col-8">Description</th>
+						<th class="text-center col-2">Amount</th>
+						<th class="text-center col-2">Status</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+				</tbody>
+			</table>
+		</div>
+	</main>
+</body>
+
+</html>
