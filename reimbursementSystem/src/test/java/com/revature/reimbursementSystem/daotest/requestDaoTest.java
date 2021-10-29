@@ -47,10 +47,10 @@ public class requestDaoTest {
 	@Test
 	public void testupdateRequest() {
 		request testRequest = new request();
-		testRequest.setRequest_id(2);
+		testRequest.setRequest_id(4);
 		testRequest.setAccount_id(2);
 		testRequest.setConditiontype_id(2);
-		testRequest.setDescription("test2");
+		testRequest.setDescription("test3");
 		testRequest.setNote("junit test update");// modify to test
 		testRequest.setAmount(13.54f);
 		rdao.updateRequest(testRequest);
