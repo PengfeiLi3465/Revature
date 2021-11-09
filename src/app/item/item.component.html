@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <h2 align="center">Item list</h2>
+    </div>
+    <div>
+        <table class="table table-info table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th> Item Id </th>
+                    <th> Item Name </th>
+                    <th> Item Price </th>
+                    <th> Quantity </th>
+                    <th> Total Price </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items;let i=index">
+                    <td>{{item.itemId}}</td>
+                    <td>{{item.itemName}}</td>
+                    <td>{{item.itemPrice}}</td>
+                    <td>
+                        <input type="number" name="quantity" id = {{item.itemId}} (change)="update(i)" min=0 placeholder="0">
+                    </td>
+                    <td><span class="subtotal">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div><input type="text" name="note" placeholder="leave a note"></div>
+        <div> <span id="totalPrice">0</span>$</div>
+        <div><button (click)="submit()">Submit</button></div>
+    </div>
+</div>
+
