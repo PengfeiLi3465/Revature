@@ -35,9 +35,10 @@ export class LoginComponent implements OnInit {
     //   "userPassword":userPassword
     // }
     // console.log(params);
+    console.log(this.baseUrl + "/usersbyemail/"+userEmail+"/"+userPassword);
+    console.log(this.httpClient.get(this.baseUrl + "/usersbyemail/"+userEmail+"/"+userPassword));
     return this.httpClient.get<User>(this.baseUrl + "/usersbyemail/"+userEmail+"/"+userPassword);
-    // console.log(this.baseUrl + "/usersbyemail/"+userEmail+"/"+userPassword);
-    // console.log(this.httpClient.get(this.baseUrl + "/usersbyemail/"+userEmail+"/"+userPassword));
+
 
   }
 
