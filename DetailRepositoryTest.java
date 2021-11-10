@@ -80,13 +80,14 @@ private DetailRepository detailRepository;
     @Test
     public void testMock() {
     DetailRepository mockObj = Mockito.mock(DetailRepository.class);
-    Mockito.when(mockObj.count()).thenReturn(111L);
+    List<Detail> detail = detailRepository.findAll();
+    Mockito.when(mockObj.findAllByorderId(1)).thenReturn(detail);
 
-    long userCount = mockObj.count();
+    List<Detail> order = mockObj.findAllByorderId(1);
 
    // Assert.
-    assertEquals(111L, userCount);
-    Mockito.verify(mockObj).count(); 
+    assertEquals(detail, order);
+    Mockito.verify(mockObj).findAllByorderId(1); 
 	
     }
     
