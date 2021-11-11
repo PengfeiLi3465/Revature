@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <h2 align="center">Order list</h2>
+    </div>
+    <div>
+        <table class="table table-info table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th> Order Id </th>
+                    <th> User Id </th>
+                    <th> Condition Type </th>
+                    <th> Total Price </th>
+                    <th> Order Note </th>
+                    <th> Check </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders;let i=index">
+                    <td name="orderId">{{order.orderId}}</td>
+                    <td name="userId">{{order.userId}}</td>
+                    <td >{{order.conditiontypeId}}</td>
+                    <td name="totalPrice">{{order.totalPrice}}</td>
+                    <td name="orderNote">{{order.orderNote}}</td>
+                    <td><button (click)="check(i)">Check</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
