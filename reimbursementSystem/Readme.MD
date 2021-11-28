@@ -11,9 +11,21 @@ can optionally leave a message.
     - A Manager can appove or deny any reimbursement
     - Managers can view a 'statistics' page. That includes information like what employee spends the most money, mean expenditure cost etc...
 
-### Technical and testing requirements
+### Technical and testing notice
 - Backend developed in Javalin
 - Backend: RESTful web service
 - AWS postgres RDS used to persist information
 - All DAO methods have a test
 - All Service methods with logic have a test
+
+### Technical used
+- Java
+- JavaScript
+- HTML
+- CSS
+- JDBC
+- PostgreSQL
+- Javalin
+- Maven
+- JUnit4
+- Log4J
